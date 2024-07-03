@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE04A9F22C159A0700659A15 /* ExperimentalAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04A9F12C159A0700659A15 /* ExperimentalAppApp.swift */; };
+		FE04A9F22C159A0700659A15 /* ExperimentalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04A9F12C159A0700659A15 /* ExperimentalApp.swift */; };
 		FE04A9F42C159A0700659A15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04A9F32C159A0700659A15 /* ContentView.swift */; };
 		FE04A9F62C159A0800659A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE04A9F52C159A0800659A15 /* Assets.xcassets */; };
 		FE04A9F92C159A0800659A15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE04A9F82C159A0800659A15 /* Preview Assets.xcassets */; };
 		FE04AA032C159A0900659A15 /* ExperimentalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04AA022C159A0900659A15 /* ExperimentalAppTests.swift */; };
 		FE04AA0D2C159A0900659A15 /* ExperimentalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04AA0C2C159A0900659A15 /* ExperimentalAppUITests.swift */; };
 		FE04AA0F2C159A0900659A15 /* ExperimentalAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04AA0E2C159A0900659A15 /* ExperimentalAppUITestsLaunchTests.swift */; };
+		FE640B602C34E43A0092E138 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B5F2C34E43A0092E138 /* StateView.swift */; };
+		FE640B622C34E52C0092E138 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B612C34E52C0092E138 /* ParentView.swift */; };
+		FE640B642C34E53C0092E138 /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B632C34E53C0092E138 /* ChildView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		FE04A9EE2C159A0700659A15 /* ExperimentalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE04A9F12C159A0700659A15 /* ExperimentalAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalAppApp.swift; sourceTree = "<group>"; };
+		FE04A9F12C159A0700659A15 /* ExperimentalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalApp.swift; sourceTree = "<group>"; };
 		FE04A9F32C159A0700659A15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE04A9F52C159A0800659A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE04A9F82C159A0800659A15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,6 +47,9 @@
 		FE04AA082C159A0900659A15 /* ExperimentalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE04AA0C2C159A0900659A15 /* ExperimentalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalAppUITests.swift; sourceTree = "<group>"; };
 		FE04AA0E2C159A0900659A15 /* ExperimentalAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FE640B5F2C34E43A0092E138 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		FE640B612C34E52C0092E138 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
+		FE640B632C34E53C0092E138 /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,12 @@
 		FE04A9F02C159A0700659A15 /* ExperimentalApp */ = {
 			isa = PBXGroup;
 			children = (
-				FE04A9F12C159A0700659A15 /* ExperimentalAppApp.swift */,
+				FE640B5E2C34E4030092E138 /* Async */,
+				FE640B5D2C34E3A30092E138 /* EnvironmentObject */,
+				FE640B5C2C34E38D0092E138 /* Binding */,
+				FE640B5B2C34E3820092E138 /* StateObj */,
+				FE640B5A2C34E36E0092E138 /* State */,
+				FE04A9F12C159A0700659A15 /* ExperimentalApp.swift */,
 				FE04A9F32C159A0700659A15 /* ContentView.swift */,
 				FE04A9F52C159A0800659A15 /* Assets.xcassets */,
 				FE04A9F72C159A0800659A15 /* Preview Content */,
@@ -125,6 +136,44 @@
 				FE04AA0E2C159A0900659A15 /* ExperimentalAppUITestsLaunchTests.swift */,
 			);
 			path = ExperimentalAppUITests;
+			sourceTree = "<group>";
+		};
+		FE640B5A2C34E36E0092E138 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FE640B5F2C34E43A0092E138 /* StateView.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		FE640B5B2C34E3820092E138 /* StateObj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StateObj;
+			sourceTree = "<group>";
+		};
+		FE640B5C2C34E38D0092E138 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				FE640B612C34E52C0092E138 /* ParentView.swift */,
+				FE640B632C34E53C0092E138 /* ChildView.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
+		FE640B5D2C34E3A30092E138 /* EnvironmentObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EnvironmentObject;
+			sourceTree = "<group>";
+		};
+		FE640B5E2C34E4030092E138 /* Async */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Async;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE640B622C34E52C0092E138 /* ParentView.swift in Sources */,
+				FE640B602C34E43A0092E138 /* StateView.swift in Sources */,
 				FE04A9F42C159A0700659A15 /* ContentView.swift in Sources */,
-				FE04A9F22C159A0700659A15 /* ExperimentalAppApp.swift in Sources */,
+				FE04A9F22C159A0700659A15 /* ExperimentalApp.swift in Sources */,
+				FE640B642C34E53C0092E138 /* ChildView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
