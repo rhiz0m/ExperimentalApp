@@ -11,7 +11,7 @@ import SwiftUI
 struct ExperimentalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MVVMExp()
         }
     }
 }

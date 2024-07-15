@@ -17,6 +17,7 @@
 		FE640B602C34E43A0092E138 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B5F2C34E43A0092E138 /* StateView.swift */; };
 		FE640B622C34E52C0092E138 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B612C34E52C0092E138 /* ParentView.swift */; };
 		FE640B642C34E53C0092E138 /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B632C34E53C0092E138 /* ChildView.swift */; };
+		FEB6CC3A2C4577B300C60B9E /* MVVMExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB6CC392C4577B300C60B9E /* MVVMExp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		FE640B5F2C34E43A0092E138 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		FE640B612C34E52C0092E138 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		FE640B632C34E53C0092E138 /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
+		FEB6CC392C4577B300C60B9E /* MVVMExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		FE04A9F02C159A0700659A15 /* ExperimentalApp */ = {
 			isa = PBXGroup;
 			children = (
+				FEB6CC382C45779700C60B9E /* MVVMExp */,
 				FE640B5E2C34E4030092E138 /* Async */,
 				FE640B5D2C34E3A30092E138 /* EnvironmentObject */,
 				FE640B5C2C34E38D0092E138 /* Binding */,
@@ -174,6 +177,14 @@
 			children = (
 			);
 			path = Async;
+			sourceTree = "<group>";
+		};
+		FEB6CC382C45779700C60B9E /* MVVMExp */ = {
+			isa = PBXGroup;
+			children = (
+				FEB6CC392C4577B300C60B9E /* MVVMExp.swift */,
+			);
+			path = MVVMExp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 				FE640B622C34E52C0092E138 /* ParentView.swift in Sources */,
 				FE640B602C34E43A0092E138 /* StateView.swift in Sources */,
 				FE04A9F42C159A0700659A15 /* ContentView.swift in Sources */,
+				FEB6CC3A2C4577B300C60B9E /* MVVMExp.swift in Sources */,
 				FE04A9F22C159A0700659A15 /* ExperimentalApp.swift in Sources */,
 				FE640B642C34E53C0092E138 /* ChildView.swift in Sources */,
 			);
