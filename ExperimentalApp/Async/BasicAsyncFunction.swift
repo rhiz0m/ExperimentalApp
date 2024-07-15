@@ -8,18 +8,35 @@
 import SwiftUI
 
 struct BasicAsyncFunction: View {
-    @State var sum = 0
+    @State var sumStructedConc = 0
+    @State var sumCallbackBasedConc = 0
     
     var body: some View {
-      VStack  {
-            Text(String(sum))
-          Button(action: {
+        VStack(spacing: 16)  {
+          Text("Structed Concurrency \(sumStructedConc)")
+            Button(action: {
               Task {
-                  sum = await asyncFunc()
+                  sumStructedConc = await asyncStructuredConcurrency()
               }
           }, label: {
-              Text("Press")
+              Text("Structed Concurrency")
+                  .padding()
+                  .background(.yellow)
+                  .cornerRadius(8)
           })
+          
+          Text("Callback-Based Concurrency \(sumCallbackBasedConc)")
+            Button(action: {
+                asyncCallbackBasedConcurrency { result in
+                    sumCallbackBasedConc = result
+                }
+                
+            }, label: {
+                Text("Callback-Based Concurrency")
+                    .padding()
+                    .background(.orange)
+                    .cornerRadius(8)
+            })
         }
     }
     
@@ -27,10 +44,21 @@ struct BasicAsyncFunction: View {
         num * num2
     }
     
-    func asyncFunc() async -> Int {
-        try? await Task.sleep(nanoseconds: 3_000_000_000) // 3 seconds
+    func asyncStructuredConcurrency() async -> Int {
+        try? await Task.sleep(nanoseconds: 2_000_000_000) // 3 seconds
        return sum(2, 4)
     }
+    
+    func asyncCallbackBasedConcurrency(completion: @escaping (Int) -> Void) {
+        DispatchQueue.global().async {
+            let result = sum(4, 10)
+            sleep(1)
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }
+    }
+    
 }
 
 #Preview {
