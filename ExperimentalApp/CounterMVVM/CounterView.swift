@@ -7,15 +7,19 @@
 
 import SwiftUI
 
-struct StateView: View {
-    @State var counter = 0
+struct CounterView: View {
+    @ObservedObject var viewModel: CounterViewModel
+    
+    init(viewModel: CounterViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         VStack {
-            Text("\(counter)")
+            Text("\(viewModel.value)")
             
             Button(action: {
-                if counter < 10 { counter += 1 }
+                  if viewModel.value < 10 { viewModel.incrementValue() }
             }, label: {
                 Text("Increment")
                     .foregroundStyle(.black)
@@ -25,7 +29,7 @@ struct StateView: View {
             .cornerRadius(8)
             
             Button(action: {
-                if counter > 0 { counter -= 1 }
+                if viewModel.value > 0 { viewModel.decrementValue() }
             }, label: {
                 Text("Decrement")
                     .foregroundStyle(.white)
@@ -40,5 +44,5 @@ struct StateView: View {
 }
 
 #Preview {
-    StateView()
+    CounterView(viewModel: CounterViewModel())
 }

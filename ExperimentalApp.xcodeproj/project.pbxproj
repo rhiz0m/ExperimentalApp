@@ -14,7 +14,9 @@
 		FE04AA032C159A0900659A15 /* ExperimentalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04AA022C159A0900659A15 /* ExperimentalAppTests.swift */; };
 		FE04AA0D2C159A0900659A15 /* ExperimentalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04AA0C2C159A0900659A15 /* ExperimentalAppUITests.swift */; };
 		FE04AA0F2C159A0900659A15 /* ExperimentalAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE04AA0E2C159A0900659A15 /* ExperimentalAppUITestsLaunchTests.swift */; };
-		FE640B602C34E43A0092E138 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B5F2C34E43A0092E138 /* StateView.swift */; };
+		FE37CD442C469117002A4AC6 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE37CD432C469117002A4AC6 /* CounterModel.swift */; };
+		FE37CD462C469133002A4AC6 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE37CD452C469133002A4AC6 /* CounterViewModel.swift */; };
+		FE640B602C34E43A0092E138 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B5F2C34E43A0092E138 /* CounterView.swift */; };
 		FE640B622C34E52C0092E138 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B612C34E52C0092E138 /* ParentView.swift */; };
 		FE640B642C34E53C0092E138 /* ChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE640B632C34E53C0092E138 /* ChildView.swift */; };
 		FEB6CC3A2C4577B300C60B9E /* MVVMExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB6CC392C4577B300C60B9E /* MVVMExp.swift */; };
@@ -49,7 +51,9 @@
 		FE04AA082C159A0900659A15 /* ExperimentalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperimentalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE04AA0C2C159A0900659A15 /* ExperimentalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalAppUITests.swift; sourceTree = "<group>"; };
 		FE04AA0E2C159A0900659A15 /* ExperimentalAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentalAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FE640B5F2C34E43A0092E138 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		FE37CD432C469117002A4AC6 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		FE37CD452C469133002A4AC6 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
+		FE640B5F2C34E43A0092E138 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		FE640B612C34E52C0092E138 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		FE640B632C34E53C0092E138 /* ChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildView.swift; sourceTree = "<group>"; };
 		FEB6CC392C4577B300C60B9E /* MVVMExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExp.swift; sourceTree = "<group>"; };
@@ -108,8 +112,7 @@
 				FE640B5E2C34E4030092E138 /* Async */,
 				FE640B5D2C34E3A30092E138 /* EnvironmentObject */,
 				FE640B5C2C34E38D0092E138 /* Binding */,
-				FE640B5B2C34E3820092E138 /* StateObj */,
-				FE640B5A2C34E36E0092E138 /* State */,
+				FE640B5A2C34E36E0092E138 /* CounterMVVM */,
 				FE04A9F12C159A0700659A15 /* ExperimentalApp.swift */,
 				FE04A9F32C159A0700659A15 /* ContentView.swift */,
 				FE04A9F52C159A0800659A15 /* Assets.xcassets */,
@@ -143,19 +146,14 @@
 			path = ExperimentalAppUITests;
 			sourceTree = "<group>";
 		};
-		FE640B5A2C34E36E0092E138 /* State */ = {
+		FE640B5A2C34E36E0092E138 /* CounterMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				FE640B5F2C34E43A0092E138 /* StateView.swift */,
+				FE640B5F2C34E43A0092E138 /* CounterView.swift */,
+				FE37CD432C469117002A4AC6 /* CounterModel.swift */,
+				FE37CD452C469133002A4AC6 /* CounterViewModel.swift */,
 			);
-			path = State;
-			sourceTree = "<group>";
-		};
-		FE640B5B2C34E3820092E138 /* StateObj */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StateObj;
+			path = CounterMVVM;
 			sourceTree = "<group>";
 		};
 		FE640B5C2C34E38D0092E138 /* Binding */ = {
@@ -321,11 +319,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE640B622C34E52C0092E138 /* ParentView.swift in Sources */,
-				FE640B602C34E43A0092E138 /* StateView.swift in Sources */,
+				FE640B602C34E43A0092E138 /* CounterView.swift in Sources */,
+				FE37CD462C469133002A4AC6 /* CounterViewModel.swift in Sources */,
 				FE04A9F42C159A0700659A15 /* ContentView.swift in Sources */,
 				FEB6CC3A2C4577B300C60B9E /* MVVMExp.swift in Sources */,
 				FE04A9F22C159A0700659A15 /* ExperimentalApp.swift in Sources */,
 				FEB6CC3E2C45842500C60B9E /* BasicAsyncFunction.swift in Sources */,
+				FE37CD442C469117002A4AC6 /* CounterModel.swift in Sources */,
 				FE640B642C34E53C0092E138 /* ChildView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
