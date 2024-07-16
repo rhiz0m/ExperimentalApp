@@ -16,6 +16,10 @@ struct CounterView: View {
     
     var body: some View {
         VStack {
+            Text(viewModel.isPremium ? "PREMIUM" : "")
+                .font(.title)
+                .foregroundStyle(.cyan)
+            
             Text("\(viewModel.value)")
             
             Button(action: {

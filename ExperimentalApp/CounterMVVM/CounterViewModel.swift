@@ -14,6 +14,10 @@ class CounterViewModel: ObservableObject {
         counterModel.counter
     }
     
+    var isPremium: Bool {
+        counterModel.isPremium
+    }
+    
     func incrementValue() {
         counterModel.increment()
     }
